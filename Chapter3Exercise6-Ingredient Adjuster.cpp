@@ -9,22 +9,34 @@ then display the number of cups pf each ingredient needed for the specified numb
 
 #include <iostream>
 #include <iomanip>
-using names
-
-
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //Original recipe for the cookies
+    double cookies = 48,
+        cupsofSugar = 1.5,
+        cupsofButter = 1,
+        cupsofFlour = 2.75;
+
+    //Variable for the needed amounts of ingredients
+    double neededCookies,
+        neededSugar,
+        neededButter,
+        neededFlour;
+
+    cout << "How many cookies do you want to bake? ";
+    cin >> neededCookies;
+
+    //Equation for figuring out the ratios of needed ingredients
+    neededSugar = (neededCookies * cupsofSugar)/cookies;
+    neededButter = (neededCookies * cupsofButter)/cookies;
+    neededFlour = (neededCookies * cupsofFlour)/cookies;
+
+    cout << "For the sugar you will need " <<fixed<< setprecision(1) << neededSugar << " cups!" << endl;
+    cout << "For the butter you will need " << fixed << setprecision(1) << neededButter << " cups!" << endl;
+    cout << "For the flour you will need " << fixed << setprecision(1) << neededFlour << " cups!" << endl;
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
